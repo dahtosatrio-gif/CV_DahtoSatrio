@@ -1,110 +1,164 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dahto Khoiri Satrio | Asisten Praktikum</title>
+    <title>Dahto Khoiri Satrio | CV</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #d8d8d8;
-            color: #303b50;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #111;
+        }
+
+
         /* =========================
-           CONTAINER UTAMA
+           CONTAINER
         ========================= */
-        .cv-container {
+
+        .cv {
             width: 1000px;
             min-height: 1414px;
-            margin: 30px auto;
-            background: white;
+            margin: 40px auto;
+
             display: grid;
-            grid-template-columns: 310px 1fr;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            grid-template-columns: 310px 690px;
+
+            background: #fff;
+
+            box-shadow:
+                0 15px 50px rgba(255,255,255,0.08);
         }
+
 
         /* =========================
            SIDEBAR
         ========================= */
+
         .sidebar {
-            background: #e5e5e5;
+            background: #000;
+            color: #fff;
+
+            padding: 350px 35px 45px;
+
             position: relative;
-            padding: 390px 35px 40px;
         }
+
 
         /* FOTO */
-        .profile-photo {
+
+        .photo {
             position: absolute;
-            top: 65px;
+
+            top: 55px;
             left: 50%;
+
             transform: translateX(-50%);
 
-            width: 220px;
-            height: 220px;
+            width: 210px;
+            height: 210px;
 
             border-radius: 50%;
-            border: 7px solid white;
 
             overflow: hidden;
-            background: #ddd;
+
+            border: 5px solid #fff;
+
+            background: #222;
         }
 
-        .profile-photo img {
+        .photo img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
         }
 
-        /* SIDEBAR SECTION */
+
+        /* SIDEBAR TITLE */
+
         .sidebar-section {
-            margin-bottom: 48px;
+            margin-bottom: 45px;
         }
 
         .sidebar-title {
-            font-size: 24px;
+            font-size: 25px;
+
             letter-spacing: 4px;
+
             font-weight: 800;
-            margin-bottom: 8px;
+
+            color: #fff;
+
+            margin-bottom: 10px;
         }
 
         .sidebar-line {
             height: 2px;
-            background: #303b50;
+
             width: 100%;
+
+            background: #fff;
+
             margin-bottom: 18px;
         }
 
+
+        /* CONTACT */
+
         .contact-item {
             display: flex;
-            align-items: flex-start;
+
             gap: 12px;
-            margin-bottom: 20px;
-            font-size: 15px;
+
+            margin-bottom: 18px;
+
+            font-size: 14px;
+
             line-height: 1.5;
-            color: #3d4655;
+
+            color: #eee;
         }
 
         .contact-icon {
             width: 20px;
-            font-size: 17px;
-            font-weight: bold;
+
             flex-shrink: 0;
+
+            font-size: 16px;
+
+            font-weight: bold;
         }
 
-        .sidebar-subtitle {
-            font-size: 15px;
-            font-weight: bold;
-            margin-top: 23px;
+
+        /* SKILL */
+
+        .sidebar h3 {
+            font-size: 14px;
+
+            margin-top: 22px;
+
             margin-bottom: 10px;
+
+            color: #fff;
         }
 
         .sidebar ul {
@@ -112,590 +166,735 @@
         }
 
         .sidebar li {
-            margin-bottom: 10px;
-            font-size: 15px;
-            line-height: 1.4;
-            color: #3d4655;
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            margin-bottom: 9px;
+
+            color: #eee;
         }
+
 
         /* =========================
-           BAGIAN KANAN
+           MAIN
         ========================= */
-        .main-content {
-            background: white;
+
+        .main {
+            background: #fff;
         }
 
-        /* HEADER */
-        .header {
-            height: 240px;
-            background: #303b50;
-            color: white;
 
-            padding: 65px 55px;
+        /* HEADER */
+
+        .header {
+            background: #fff;
+
+            padding: 70px 55px 35px;
+
+            border-bottom: 3px solid #000;
         }
 
         .header h1 {
-            font-size: 43px;
+            font-size: 42px;
+
+            line-height: 1.1;
+
             font-weight: 800;
+
             letter-spacing: 1px;
-            margin-bottom: 12px;
+
+            color: #000;
         }
 
         .header p {
-            font-size: 24px;
-            font-weight: 400;
+            font-size: 21px;
+
+            margin-top: 12px;
+
+            letter-spacing: 2px;
+
+            color: #333;
         }
+
 
         /* =========================
-           TIMELINE
+           CONTENT
         ========================= */
+
         .content {
-            position: relative;
-            padding: 65px 50px 60px 90px;
+            padding: 55px 55px 60px;
         }
 
-        .content::before {
-            content: "";
-
-            position: absolute;
-            top: 75px;
-            bottom: 65px;
-            left: 42px;
-
-            width: 2px;
-            background: #303b50;
-        }
 
         /* SECTION */
-        .content-section {
-            position: relative;
-            margin-bottom: 60px;
+
+        .section {
+            margin-bottom: 50px;
         }
 
-        /* ICON TIMELINE */
-        .timeline-icon {
-            position: absolute;
-
-            left: -68px;
-            top: -5px;
-
-            width: 36px;
-            height: 36px;
-
-            background: #303b50;
-            color: white;
-
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 15px;
-
-            border: 3px solid white;
-            box-shadow: 0 0 0 1px #303b50;
-        }
-
-        /* JUDUL SECTION */
-        .content-section h2 {
+        .section-title {
             font-size: 26px;
+
             letter-spacing: 4px;
+
             font-weight: 800;
 
-            margin-bottom: 10px;
+            color: #000;
+
+            padding-bottom: 9px;
+
+            border-bottom: 2px solid #000;
+
+            margin-bottom: 18px;
         }
 
-        .content-line {
-            height: 2px;
-            background: #303b50;
-            width: 100%;
 
-            margin-bottom: 15px;
-        }
+        /* PROFILE */
 
-        /* PROFIL */
         .profile-text {
-            font-size: 16px;
-            line-height: 1.65;
-            color: #3d4655;
+            font-size: 15px;
+
+            line-height: 1.7;
+
             text-align: justify;
+
+            color: #222;
         }
 
-        /* =========================
-           PENGALAMAN
-        ========================= */
-        .experience-item {
-            position: relative;
 
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
             display: grid;
-            grid-template-columns: 1fr 55px;
 
-            gap: 15px;
+            grid-template-columns: 15px 1fr 50px;
 
-            margin-bottom: 27px;
+            column-gap: 7px;
 
-            padding-left: 17px;
+            margin-bottom: 28px;
         }
 
-        .experience-item::before {
-            content: "•";
+        .bullet {
+            font-size: 20px;
 
-            position: absolute;
-            left: 0;
-            top: -2px;
+            line-height: 1.2;
 
-            font-size: 21px;
-            font-weight: bold;
+            color: #000;
         }
 
-        .experience-title {
-            font-size: 17px;
-            font-weight: 800;
-
-            line-height: 1.35;
-
-            margin-bottom: 4px;
-        }
-
-        .experience-description {
-            font-size: 15px;
-            line-height: 1.45;
-            color: #3d4655;
-        }
-
-        .experience-year {
-            font-size: 15px;
-            text-align: right;
-            padding-top: 2px;
-            color: #3d4655;
-        }
-
-        /* =========================
-           PENDIDIKAN
-        ========================= */
-        .education-item {
-            position: relative;
-            margin-bottom: 27px;
-            padding-left: 18px;
-        }
-
-        .education-item::before {
-            content: "•";
-
-            position: absolute;
-            left: 0;
-            top: -2px;
-
-            font-size: 21px;
-            font-weight: bold;
-        }
-
-        .education-title {
-            font-size: 18px;
-            font-weight: 800;
-
-            margin-bottom: 4px;
-        }
-
-        .education-info {
+        .experience h3 {
             font-size: 16px;
-            color: #3d4655;
+
+            line-height: 1.45;
+
+            font-weight: 800;
+
+            color: #111;
         }
+
+        .year {
+            font-size: 14px;
+
+            text-align: right;
+
+            color: #333;
+        }
+
 
         /* =========================
-           RESPONSIVE HP
+           EDUCATION
         ========================= */
-        @media screen and (max-width: 1050px) {
 
-            .cv-container {
-                width: 95%;
-            }
+        .education {
+            display: grid;
 
-            .header h1 {
-                font-size: 36px;
-            }
+            grid-template-columns: 15px 1fr;
+
+            column-gap: 7px;
+
+            margin-bottom: 25px;
         }
 
-        @media screen and (max-width: 750px) {
+        .education h3 {
+            font-size: 17px;
+
+            font-weight: 800;
+
+            margin-bottom: 4px;
+        }
+
+        .education p {
+            font-size: 15px;
+
+            color: #333;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           HOVER EFFECT
+        ========================= */
+
+        .sidebar li {
+            transition: 0.2s;
+        }
+
+        .sidebar li:hover {
+            color: #fff;
+
+            transform: translateX(4px);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1050px) {
 
             body {
-                background: white;
+                background: #fff;
             }
 
-            .cv-container {
+            .cv {
                 width: 100%;
+
                 margin: 0;
-                display: block;
+
                 box-shadow: none;
             }
+        }
 
-            .sidebar {
-                padding-top: 330px;
+
+        @media (max-width: 750px) {
+
+            .cv {
+                display: block;
+
+                min-height: auto;
             }
 
-            .profile-photo {
+
+            .sidebar {
+
+                padding: 320px 30px 40px;
+            }
+
+
+            .photo {
+
                 width: 190px;
+
                 height: 190px;
             }
 
+
             .header {
-                height: auto;
+
                 text-align: center;
+
                 padding: 45px 25px;
             }
 
-            .header h1 {
-                font-size: 30px;
-            }
-
-            .header p {
-                font-size: 20px;
-            }
-
-            .content {
-                padding: 55px 30px 50px 70px;
-            }
-
-            .content::before {
-                left: 28px;
-            }
-
-            .timeline-icon {
-                left: -59px;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-
-            .sidebar {
-                padding-left: 25px;
-                padding-right: 25px;
-            }
 
             .header h1 {
-                font-size: 25px;
+
+                font-size: 31px;
             }
 
+
             .header p {
+
                 font-size: 18px;
             }
 
+
             .content {
-                padding-left: 55px;
-                padding-right: 20px;
+
+                padding: 45px 30px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .sidebar {
+
+                padding: 310px 25px 35px;
             }
 
-            .content-section h2 {
+
+            .header h1 {
+
+                font-size: 25px;
+            }
+
+
+            .header p {
+
+                font-size: 16px;
+            }
+
+
+            .section-title {
+
                 font-size: 21px;
             }
 
-            .profile-text,
-            .experience-description,
-            .education-info {
+
+            .profile-text {
+
                 font-size: 14px;
             }
 
-            .experience-title,
-            .education-title {
+
+            .experience h3 {
+
+                font-size: 14px;
+            }
+
+
+            .education h3 {
+
                 font-size: 15px;
             }
         }
+
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            @page {
+
+                size: A4;
+
+                margin: 0;
+            }
+
+
+            body {
+
+                background: white;
+            }
+
+
+            .cv {
+
+                width: 210mm;
+
+                min-height: 297mm;
+
+                margin: 0;
+
+                box-shadow: none;
+            }
+        }
+
     </style>
+
 </head>
 
 
 <body>
 
-    <div class="cv-container">
 
-        <!-- =========================
-             SIDEBAR
-        ========================== -->
-        <aside class="sidebar">
-
-            <!-- FOTO -->
-            <div class="profile-photo">
-                <img src="foto.jpg" alt="Foto Dahto Khoiri Satrio">
-            </div>
+<div class="cv">
 
 
-            <!-- KONTAK -->
-            <div class="sidebar-section">
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
 
-                <h2 class="sidebar-title">KONTAK</h2>
-                <div class="sidebar-line"></div>
-
-                <div class="contact-item">
-                    <span class="contact-icon">☎</span>
-                    <span>+6287881072838</span>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-icon">✉</span>
-                    <span>dahtosatrio@gmail.com</span>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-icon">●</span>
-
-                    <span>
-                        Jl. Cagaralam Selatan II,<br>
-                        Depok, Jawa Barat
-                    </span>
-                </div>
-
-            </div>
+    <aside class="sidebar">
 
 
-            <!-- SKILL -->
-            <div class="sidebar-section">
+        <!-- FOTO -->
 
-                <h2 class="sidebar-title">SKIL</h2>
-                <div class="sidebar-line"></div>
+        <div class="photo">
 
+            <img
+                src="foto.png"
+                alt="Dahto Khoiri Satrio"
+            >
 
-                <h3 class="sidebar-subtitle">
-                    Microsoft Office
-                </h3>
-
-                <ul>
-                    <li>Microsoft Excel</li>
-                    <li>Microsoft Word</li>
-                    <li>Microsoft Power BI</li>
-                </ul>
+        </div>
 
 
-                <h3 class="sidebar-subtitle">
-                    Academic & Productivity
-                </h3>
 
-                <ul>
-                    <li>Mendeley Desktop</li>
-                    <li>WordPress & Hosting</li>
-                </ul>
+        <!-- KONTAK -->
+
+        <section class="sidebar-section">
+
+            <h2 class="sidebar-title">
+                KONTAK
+            </h2>
+
+            <div class="sidebar-line"></div>
 
 
-                <h3 class="sidebar-subtitle">
-                    Design & Multimedia
-                </h3>
+            <div class="contact-item">
 
-                <ul>
-                    <li>Figma</li>
-                    <li>Canva</li>
-                    <li>CapCut</li>
-                </ul>
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <span>
+                    +6287881072838
+                </span>
 
             </div>
 
 
-            <!-- BAHASA -->
-            <div class="sidebar-section">
+            <div class="contact-item">
 
-                <h2 class="sidebar-title">BAHASA</h2>
-                <div class="sidebar-line"></div>
+                <span class="contact-icon">
+                    ✉
+                </span>
 
-                <ul>
-                    <li>English</li>
-                    <li>Indonesia</li>
-                </ul>
+                <span>
+                    dahtosatrio@gmail.com
+                </span>
 
             </div>
 
-        </aside>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ●
+                </span>
+
+                <span>
+                    Jl. Cagaralam Selatan II,
+                    <br>
+                    Depok, Jawa Barat
+                </span>
+
+            </div>
+
+        </section>
 
 
-        <!-- =========================
-             MAIN CONTENT
-        ========================== -->
-        <main class="main-content">
+
+        <!-- SKILL -->
+
+        <section class="sidebar-section">
+
+            <h2 class="sidebar-title">
+                SKIL
+            </h2>
+
+            <div class="sidebar-line"></div>
 
 
-            <!-- HEADER -->
-            <header class="header">
+            <h3>
+                Microsoft Office
+            </h3>
 
-                <h1>
-                    DAHTO KHOIRI SATRIO
-                </h1>
+            <ul>
 
-                <p>
-                    ASISTEN PRAKTIKUM
+                <li>
+                    Pengoprasian Microsoft Excel
+                </li>
+
+                <li>
+                    Pengoprasian Microsoft Word
+                </li>
+
+                <li>
+                    Pengoprasian Microsoft Power BI
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Academic & Productivity
+            </h3>
+
+            <ul>
+
+                <li>
+                    Sitasi Mendeley Desktop
+                </li>
+
+                <li>
+                    WordPress & Hosting
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Design & Multimedia
+            </h3>
+
+            <ul>
+
+                <li>
+                    Mahir Desain Melalui Aplikasi Canva
+                </li>
+
+                <li>
+                    CapCut
+                </li>
+
+                <li>
+                    Figma
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- BAHASA -->
+
+        <section class="sidebar-section">
+
+            <h2 class="sidebar-title">
+                BAHASA
+            </h2>
+
+            <div class="sidebar-line"></div>
+
+            <ul>
+
+                <li>
+                    English
+                </li>
+
+                <li>
+                    Indonesia
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <h1>
+                DAHTO KHOIRI SATRIO
+            </h1>
+
+            <p>
+                CALON ASISTEN PRAKTIKUM
+            </p>
+
+        </header>
+
+
+
+        <div class="content">
+
+
+            <!-- PROFIL -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    PROFIL
+                </h2>
+
+
+                <p class="profile-text">
+
+                    Mahasiswa Sistem Informasi Telkom University
+                    dengan penguasaan berbagai aplikasi yang digunakan
+                    dalam mata kuliah Pengantar Sistem Informasi,
+                    meliputi Microsoft Excel, Word, Power BI,
+                    Mendeley Desktop, Canva, CapCut, Figma,
+                    serta WordPress & Hosting.
+
+                    Memiliki kemampuan dalam mengolah data,
+                    menyusun laporan, membuat visualisasi,
+                    serta merancang tampilan digital.
+
+                    Mampu bekerja sama dalam tim dan memiliki
+                    kemampuan komunikasi serta ketertarikan
+                    dalam membagikan pengetahuan untuk membantu
+                    mahasiswa memahami materi praktikum.
+
                 </p>
 
-            </header>
+            </section>
 
 
-            <div class="content">
+
+            <!-- PENGALAMAN -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    PENGALAMAN
+                </h2>
 
 
-                <!-- =====================
-                     PROFIL
-                ====================== -->
-                <section class="content-section">
+                <div class="experience">
 
-                    <div class="timeline-icon">
-                        ●
+                    <div class="bullet">
+                        •
                     </div>
 
-                    <h2>
-                        PROFIL
-                    </h2>
+                    <div>
 
-                    <div class="content-line"></div>
-
-                    <p class="profile-text">
-                        Mahasiswa Sistem Informasi Telkom University
-                        dengan penguasaan berbagai aplikasi yang digunakan
-                        dalam mata kuliah Pengantar Sistem Informasi,
-                        seperti Microsoft Excel, Word, Power BI,
-                        Mendeley Desktop, Canva, CapCut, Figma,
-                        serta WordPress & Hosting.
-
-                        Memiliki pemahaman yang baik terhadap materi
-                        praktikum, kemampuan komunikasi dan kerja sama tim,
-                        serta ketertarikan dalam membantu dan membimbing
-                        adik tingkat memahami materi dan penggunaan aplikasi.
-                    </p>
-
-                </section>
-
-
-                <!-- =====================
-                     PENGALAMAN
-                ====================== -->
-                <section class="content-section">
-
-                    <div class="timeline-icon">
-                        ●
-                    </div>
-
-                    <h2>
-                        PENGALAMAN
-                    </h2>
-
-                    <div class="content-line"></div>
-
-
-                    <!-- Pengalaman 1 -->
-                    <div class="experience-item">
-
-                        <div>
-
-                            <h3 class="experience-title">
-                                Praktikum Pengantar Sistem Informasi
-                            </h3>
-
-                            <p class="experience-description">
-                                Memperoleh nilai tertinggi dan mampu
-                                memahami materi pada setiap modul
-                                dengan baik.
-                            </p>
-
-                        </div>
-
-                        <span class="experience-year">
-                            2025
-                        </span>
-
-                    </div>
-
-
-                    <!-- Pengalaman 2 -->
-                    <div class="experience-item">
-
-                        <div>
-
-                            <h3 class="experience-title">
-                                Tugas Besar Pengantar Sistem Informasi
-                            </h3>
-
-                            <p class="experience-description">
-                                Menyelesaikan tugas besar dengan hasil
-                                yang baik tanpa revisi.
-                            </p>
-
-                        </div>
-
-                        <span class="experience-year">
-                            2025
-                        </span>
-
-                    </div>
-
-
-                    <!-- Pengalaman 3 -->
-                    <div class="experience-item">
-
-                        <div>
-
-                            <h3 class="experience-title">
-                                UI/UX Design
-                            </h3>
-
-                            <p class="experience-description">
-                                Merancang UI/UX aplikasi pemberdayaan
-                                penyandang disabilitas menggunakan Figma.
-                            </p>
-
-                        </div>
-
-                        <span class="experience-year">
-                            2026
-                        </span>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =====================
-                     PENDIDIKAN
-                ====================== -->
-                <section class="content-section">
-
-                    <div class="timeline-icon">
-                        ●
-                    </div>
-
-                    <h2>
-                        PENDIDIKAN
-                    </h2>
-
-                    <div class="content-line"></div>
-
-
-                    <div class="education-item">
-
-                        <h3 class="education-title">
-                            Telkom University
+                        <h3>
+                            Menyelesaikan Tugas Besar Mata Kuliah
+                            Pengantar Sistem Informasi Tanpa Revisi Apapun.
                         </h3>
 
-                        <p class="education-info">
-                            S1 Sistem Informasi | 2025–Sekarang
+                    </div>
+
+                    <div class="year">
+                        2025
+                    </div>
+
+                </div>
+
+
+
+                <div class="experience">
+
+                    <div class="bullet">
+                        •
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mendapat Nilai Tertinggi dari Pada Praktikum
+                            Pengantar Sistem Informasi Karena Memahami
+                            Materi Cepat Disetiap Modul.
+                        </h3>
+
+                    </div>
+
+                    <div class="year">
+                        2025
+                    </div>
+
+                </div>
+
+
+
+                <div class="experience">
+
+                    <div class="bullet">
+                        •
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Membuat UI UX aplikasi untuk Pemberdayaan
+                            Penyandang Disabilitas Melalui Figma.
+                        </h3>
+
+                    </div>
+
+                    <div class="year">
+                        2025
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PENDIDIKAN -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    PENDIDIKAN
+                </h2>
+
+
+                <div class="education">
+
+                    <div class="bullet">
+                        •
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            TELKOM UNIVERSITY
+                        </h3>
+
+                        <p>
+                            2025 - 2029
+                        </p>
+
+                        <p>
+                            Sistem Informasi
                         </p>
 
                     </div>
 
+                </div>
 
-                    <div class="education-item">
 
-                        <h3 class="education-title">
-                            SMAN 11 Depok
+
+                <div class="education">
+
+                    <div class="bullet">
+                        •
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            SMAN 11 DEPOK
                         </h3>
 
-                        <p class="education-info">
-                            IPA | 2023–2025
+                        <p>
+                            2023 - 2025
+                        </p>
+
+                        <p>
+                            IPA
                         </p>
 
                     </div>
 
-                </section>
+                </div>
 
-            </div>
+            </section>
 
-        </main>
 
-    </div>
+        </div>
+
+    </main>
+
+
+</div>
+
 
 </body>
+
 </html>
